@@ -1,0 +1,82 @@
+@use '../../m.scss';
+
+.projects {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 750px;
+  max-width: 90%;
+  margin: auto;
+  gap: 80px;
+  margin-top: 50px;
+
+  @include m.mq {
+    margin-top: 30px;
+  }
+
+  .projectsWrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+    @include m.mq {
+      flex-flow: column;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      max-width: 400px;
+      min-width: 280px;
+      flex: 1 1 0;
+
+      .projectsWrapperItem {
+        display: flex;
+        flex-flow: column;
+        padding: 10px;
+        border-radius: 10px;
+        border: solid 2px #aaa;
+        text-align: center;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        img {
+          max-width: 100%;
+          border-radius: 10px;
+          transform: translate(0, -20%);
+          padding: 5px;
+          border: solid 2px #aaa;
+          background-color: #111;
+        }
+
+        .itemContent {
+          margin-top: -10px;
+          display: flex;
+          flex-flow: column;
+          gap: 10px;
+
+          .spanWrapper {
+            display: flex;
+            gap: 10px;
+            flex-flow: row wrap;
+            justify-content: center;
+
+            span {
+              padding: 3px 5px;
+              border-radius: 5px;
+              border: solid 1px #aaa;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

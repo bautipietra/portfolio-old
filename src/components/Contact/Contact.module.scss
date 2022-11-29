@@ -1,0 +1,64 @@
+@use '../../m.scss';
+
+.contact {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 750px;
+  max-width: 90%;
+  margin: auto;
+  gap: 50px;
+  margin-bottom: 100px;
+
+  .contactWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @include m.mq {
+      flex-flow: column;
+    }
+
+    a {
+      text-decoration: none;
+      flex: 1 1 0;
+      text-align: center;
+
+      @include m.mq {
+        width: 100%;
+      }
+
+      .contactWrapperItem {
+        border: solid 2px #aaa;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        .fi1 {
+          fill: transparent;
+          stroke: #fff;
+          stroke-width: 1.5px;
+        }
+
+        .fi2 {
+          fill: transparent;
+          stroke: #fff;
+          stroke-width: 2px;
+        }
+
+        .fa {
+          fill: #fff;
+        }
+
+      }
+    }
+  }
+}
