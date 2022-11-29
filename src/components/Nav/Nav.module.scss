@@ -18,12 +18,12 @@
 
     svg {
       padding: 5px;
-      background-color: #fff;
-      fill: #111;
+      fill: #fff;
       border-radius: 10px;
       cursor: pointer;
       display: inline;
       transition: 0.3s;
+      border: solid 1px #aaa;
 
       &:hover {
         filter: brightness(0.8);

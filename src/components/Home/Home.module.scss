@@ -8,7 +8,6 @@
   max-width: 90%;
   margin: auto;
   gap: 100px;
-  min-height: calc(50vh - 50px);
 
   @include m.mq {
     justify-content: center;
@@ -57,15 +56,15 @@
     }
 
     #resumeBtn {
-      background-color: #fff;
       text-decoration: none;
       padding: 5px 15px;
-      color: #111;
+      color: #fff;
       border-radius: 10px;
       transition: 0.3s;
       display: flex;
       align-items: center;
       gap: 10px;
+      border: solid 1px #aaa;
 
       &:hover {
         filter: brightness(0.8);
