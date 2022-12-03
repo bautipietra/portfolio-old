@@ -36,9 +36,9 @@ function Nav() {
       </div>
       <nav className={`${s.navWrapper} ${!menu ? s.menuHidden : ''}`}>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" onClick={() => setMenu(!menu)}>Home</a></li>
+          <li><a href="#projects" onClick={() => setMenu(!menu)}>Projects</a></li>
+          <li><a href="#contact" onClick={() => setMenu(!menu)}>Contact</a></li>
         </ul>
       </nav>
       <div className={s.navDarkMode}>
