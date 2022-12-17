@@ -11,6 +11,8 @@
 
   .navDarkMode {
     z-index: 15;
+    height: 30px;
+    width: 30px;
 
     .hide {
       display: none;
@@ -106,16 +108,21 @@
     @include m.mq {
       display: flex;
       flex-flow: column;
-      justify-content: space-between;
-      height: 20px;
+      height: 30px;
+      width: 30px;
       align-items: center;
+      justify-content: center;
+      gap: 3px;
       cursor: pointer;
+      border: solid 1px #aaa;
+      border-radius: 10px;
     }
 
     .menuBar {
+      position: relative;
       background-color: #fff;
       height: 2px;
-      width: 25px;
+      width: 50%;
       transition: 0.3s;
     }
 
@@ -126,9 +133,6 @@
 
     .menuBar {
       position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
 
       &:nth-child(1) {
         transform: rotate(45deg);

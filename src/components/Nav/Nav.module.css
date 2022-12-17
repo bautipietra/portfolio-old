@@ -1,0 +1,126 @@
+/* Mixins */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 750px;
+  max-width: 90%;
+  margin: auto;
+  min-height: 100px;
+}
+.nav .navDarkMode {
+  z-index: 15;
+  height: 30px;
+  width: 30px;
+}
+.nav .navDarkMode .hide {
+  display: none;
+}
+.nav .navDarkMode svg {
+  padding: 5px;
+  fill: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline;
+  transition: 0.3s;
+  border: solid 1px #aaa;
+}
+.nav .navDarkMode svg:hover {
+  filter: brightness(0.8);
+  transform: scale(1.1);
+}
+.nav .navWrapper ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav .navWrapper ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s;
+  position: relative;
+  padding-bottom: 5px;
+}
+.nav .navWrapper ul li a:hover {
+  filter: brightness(0.8);
+}
+.nav .navWrapper ul li a:hover::before {
+  width: 100%;
+  filter: brightness(0.8);
+}
+.nav .navWrapper ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 0.3s;
+}
+@media screen and (max-width: 750px) {
+  .nav .navWrapper {
+    background-color: #111;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+  }
+  .nav .navWrapper a {
+    font-size: var(--font-size-md);
+  }
+}
+@media screen and (max-width: 750px) {
+  .nav .menuHidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.nav .menu {
+  display: none;
+  z-index: 15;
+}
+@media screen and (max-width: 750px) {
+  .nav .menu {
+    display: flex;
+    flex-flow: column;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+    border: solid 1px #aaa;
+    border-radius: 10px;
+  }
+}
+.nav .menu .menuBar {
+  position: relative;
+  background-color: #fff;
+  height: 2px;
+  width: 50%;
+  transition: 0.3s;
+}
+.nav .open {
+  position: relative;
+}
+.nav .open .menuBar {
+  position: absolute;
+}
+.nav .open .menuBar:nth-child(1) {
+  transform: rotate(45deg);
+}
+.nav .open .menuBar:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.nav .open .menuBar:nth-child(2) {
+  opacity: 0;
+}/*# sourceMappingURL=Nav.module.css.map */

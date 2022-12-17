@@ -22,6 +22,19 @@ function Nav() {
 
   const [menu, setMenu] = useState(false)
 
+  const noScroll = () => window.onscroll = function () { if (window.innerWidth < 1000) window.scrollTo(0, 0) };
+  const scroll = () => window.onscroll = function () { }
+
+  const changeToScroll = () => {
+    scroll()
+    setMenu(!menu)
+  }
+
+  useEffect(() => {
+    if (menu) noScroll()
+    else scroll()
+  }, [menu])
+
   return (
     <motion.div
       className={s.nav}
@@ -30,15 +43,15 @@ function Nav() {
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}>
       <div className={`${s.menu} ${menu ? s.open : ''}`} onClick={() => setMenu(!menu)}>
-        <div className={s.menuBar}></div>
-        <div className={s.menuBar}></div>
-        <div className={s.menuBar}></div>
+        <span className={s.menuBar}></span>
+        <span className={s.menuBar}></span>
+        <span className={s.menuBar}></span>
       </div>
       <nav className={`${s.navWrapper} ${!menu ? s.menuHidden : ''}`}>
         <ul>
-          <li><a href="#home" onClick={() => setMenu(!menu)}>Home</a></li>
-          <li><a href="#projects" onClick={() => setMenu(!menu)}>Projects</a></li>
-          <li><a href="#contact" onClick={() => setMenu(!menu)}>Contact</a></li>
+          <li><a href="#home" onClick={() => changeToScroll()}>Home</a></li>
+          <li><a href="#projects" onClick={() => changeToScroll()}>Projects</a></li>
+          <li><a href="#contact" onClick={() => changeToScroll()}>Contact</a></li>
         </ul>
       </nav>
       <div className={s.navDarkMode}>
