@@ -13,6 +13,11 @@
     justify-content: center;
     flex-flow: column;
     gap: 50px;
+    max-width: 100%;
+  }
+
+  @include m.mq (500px) {
+    max-width: 90%;
   }
 
   .homeWrapper {
@@ -22,6 +27,11 @@
 
     @include m.mq {
       align-items: center;
+      max-width: 60%;
+    }
+
+    @include m.mq (500px) {
+      max-width: 90%;
     }
 
     h1 {
@@ -129,7 +139,14 @@
   .homeImg {
 
     @include m.mq {
+      max-width: 400px;
+      width: 60%;
       order: -1;
+    }
+
+    @include m.mq (500px) {
+      max-width: 100%;
+      width: 100%;
     }
 
     img {
@@ -143,7 +160,7 @@
         transform: scale(1.05);
       }
 
-      @include m.mq (600px) {
+      @include m.mq {
         max-width: 100%;
       }
     }

@@ -11,6 +11,16 @@
   gap: 50px;
   margin-bottom: 100px;
 
+  @include m.mq {
+    max-width: 400px;
+    width: 60%;
+  }
+
+  @include m.mq (500px) {
+    max-width: 90%;
+    width: 90%;
+  }
+
   .contactWrapper {
     display: flex;
     flex-flow: row wrap;

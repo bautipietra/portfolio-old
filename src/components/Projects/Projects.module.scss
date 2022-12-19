@@ -12,6 +12,11 @@
 
   @include m.mq {
     margin-top: 30px;
+    width: 60%;
+  }
+
+  @include m.mq (500px) {
+    width: 90%;
   }
 
   .projectsWrapper {
@@ -26,12 +31,20 @@
       flex-flow: column;
     }
 
+    @include m.mq (500px) {
+      width: 100%;
+    }
+
     a {
       text-decoration: none;
       color: #fff;
       max-width: 400px;
       min-width: 280px;
       flex: 1 1 0;
+
+      @include m.mq (500px) {
+        max-width: 100%;
+      }
 
       .projectsWrapperItem {
         display: flex;
