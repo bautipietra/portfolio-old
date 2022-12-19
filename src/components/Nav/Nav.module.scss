@@ -26,11 +26,6 @@
       display: inline;
       transition: 0.3s;
       border: solid 1px #aaa;
-
-      &:hover {
-        filter: brightness(0.8);
-        transform: scale(1.1);
-      }
     }
   }
 

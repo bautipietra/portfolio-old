@@ -56,7 +56,6 @@
     }
 
     #resumeBtn {
-      text-decoration: none;
       padding: 5px 15px;
       color: #fff;
       border-radius: 10px;
@@ -65,10 +64,64 @@
       align-items: center;
       gap: 10px;
       border: solid 1px #aaa;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: var(--font-size-sm);
+      font-family: "Roboto Mono", monospace;
+      position: relative;
 
-      &:hover {
-        filter: brightness(0.8);
-        transform: scale(1.1);
+      ul {
+        position: absolute;
+        font-weight: bold;
+        font-size: var(--font-size-sm);
+        border-radius: 5px;
+        width: 100%;
+        left: 0;
+        top: 150%;
+        list-style: none;
+        transition: 0.3s;
+
+        li {
+          background-color: #eee;
+          transition: 0.3s;
+          padding: 3px;
+
+          &:nth-child(1) {
+            border-radius: 5px 5px 0 0;
+            position: relative;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: -5px;
+              left: 50%;
+              transform: translate(-50%, 0);
+              height: 5px;
+              width: 10px;
+              clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+              background-color: #eee;
+            }
+          }
+
+          &:nth-child(2) {
+            border-radius: 0 0 5px 5px;
+          }
+
+          &:hover {
+            filter: brightness(0.85);
+          }
+
+          a {
+            text-decoration: none;
+            color: #111;
+          }
+
+        }
+      }
+
+      .hidden {
+        opacity: 0;
+        visibility: hidden;
       }
     }
   }

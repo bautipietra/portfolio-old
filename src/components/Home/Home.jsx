@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import s from './Home.module.scss'
-import { BsEyeFill } from 'react-icons/bs'
 import Bautista from '../../assets/bautista-pietraroia.png'
 import { motion } from 'framer-motion'
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
+import { useEffect } from 'react'
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 function Home() {
+
+  const [dropDown, setDropDown] = useState(false)
+
+  useEffect(() => {
+  }, [dropDown])
+
 
   return (
     <div className={s.home} id='home'>
@@ -18,7 +26,13 @@ function Home() {
         <h1>Bautista Pietraroia</h1>
         <h3>Full Stack Web Developer</h3>
         <p>I am from La Plata, Argentina. I am 19 years old and I am passionate about technology. My main stack is PERN (PostgreSQL, Express, React and NodeJS).</p>
-        <a href="" target='_blank' id={s.resumeBtn}>See CV <BsEyeFill></BsEyeFill></a>
+        <button id={s.resumeBtn} onClick={() => { setDropDown(!dropDown) }} >
+          See CV {dropDown ? <FiChevronUp></FiChevronUp> : <FiChevronDown></FiChevronDown>}
+          <ul className={dropDown ? '' : s.hidden}>
+            <li><a href="">ES <span class="fi fi-es"></span></a></li>
+            <li><a href="">EN <span class="fi fi-us"></span></a></li>
+          </ul>
+        </button>
       </motion.div>
       <motion.div
         className={s.homeImg}
