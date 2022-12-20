@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './Contact.module.scss'
-import { FiGithub, FiLinkedin } from 'react-icons/fi'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 
 function Contact() {
@@ -23,17 +22,17 @@ function Contact() {
         viewport={{ once: true }}>
         <a href="https://www.linkedin.com/in/bautista-pietraroia/" target='_blank'>
           <div className={s.contactWrapperItem}>
-            <FiLinkedin size={'25px'} className={s.fi1}></FiLinkedin>
+            <FiLinkedin size={'25px'} className={s.fi}></FiLinkedin>
           </div>
         </a>
-        <a href="https://wa.me/5492215376148" target='_blank'>
+        <a href="mailto:bautistapietraroia@gmail.com" target='_blank'>
           <div className={s.contactWrapperItem}>
-            <FaWhatsapp size={'25px'} className={s.fa}></FaWhatsapp>
+            <FiMail size={'25px'} className={s.fi}></FiMail>
           </div>
         </a>
         <a href="https://github.com/bautipietra" target='_blank'>
           <div className={s.contactWrapperItem}>
-            <FiGithub size={'25px'} className={s.fi2}></FiGithub>
+            <FiGithub size={'25px'} className={s.fi}></FiGithub>
           </div>
         </a>
       </motion.div>
