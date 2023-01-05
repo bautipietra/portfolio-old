@@ -3,7 +3,7 @@ import s from './Projects.module.scss'
 import { motion } from 'framer-motion'
 
 import calculator from '../../assets/calculator.png'
-import henry from '../../assets/henrytools.png'
+import tasty from '../../assets/tasty.png'
 import productivity from '../../assets/productivity.png'
 import promodoro from '../../assets/promodoro.png'
 
@@ -20,18 +20,20 @@ function Projects() {
       <div className={s.projectsWrapper}>
 
         <motion.a
-          href="https://henrytools.bautistapietraroia.com.ar/"
+          href="https://tasty.bautistapietraroia.com.ar/"
           target={'_blank'}
           transition={{ delay: 0.2, duration: 0.5 }}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}>
           <div className={s.projectsWrapperItem}>
-            <img src={henry} alt="henry tools website" />
+            <img src={tasty} alt="Tasty Recipes APP" />
             <div className={s.itemContent}>
-              <h6>Henry Tools</h6>
+              <h6>Tasty Recipes App</h6>
               <div className={s.spanWrapper}>
-                <span>React</span>
+                <span>PERN Stack</span>
+                <span>Redux</span>
+                <span>SASS</span>
               </div>
             </div>
           </div>
