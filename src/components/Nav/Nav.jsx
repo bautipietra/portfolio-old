@@ -22,7 +22,7 @@ function Nav() {
 
   const [menu, setMenu] = useState(false)
 
-  const noScroll = () => window.onscroll = function () { if (window.innerWidth < 1000) window.scrollTo(0, 0) };
+  const noScroll = () => window.onscroll = function () { if (window.innerWidth < 750) window.scrollTo(0, 0) };
   const scroll = () => window.onscroll = function () { }
 
   const changeToScroll = () => {
