@@ -2,10 +2,10 @@ import React from 'react'
 import s from './Projects.module.scss'
 import { motion } from 'framer-motion'
 
-import calculator from '../../assets/calculator.png'
+import weather from '../../assets/weather.png'
 import tasty from '../../assets/tasty.png'
-import productivity from '../../assets/productivity.png'
-import promodoro from '../../assets/promodoro.png'
+import mercadoSolidario from '../../assets/mercado-solidario.png'
+import ecommerce from '../../assets/ecommerce.png'
 
 function Projects() {
   return (
@@ -20,6 +20,53 @@ function Projects() {
       <div className={s.projectsWrapper}>
 
         <motion.a
+          href="https://sneakers.bautistapietraroia.com.ar/"
+          target={'_blank'}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}>
+          <div className={s.projectsWrapperItem}>
+            <img src={ecommerce} alt="E-Commerce" />
+            <div className={s.itemContent}>
+              <h6>E-Commerce</h6>
+              <div className={s.spanWrapper}>
+                <span>React</span>
+                <span>Next</span>
+                <span>Typescript</span>
+                <span>Three</span>
+                <span>Node</span>
+                <span>Express</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+        </motion.a>
+
+        <motion.a
+          href="https://mercadosolidario.vercel.app/"
+          target={'_blank'}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}>
+          <div className={s.projectsWrapperItem}>
+            <img src={mercadoSolidario} alt="Mercado Solidario" />
+            <div className={s.itemContent}>
+              <h6>Mercado Solidario</h6>
+              <div className={s.spanWrapper}>
+                <span>React</span>
+                <span>Next</span>
+                <span>Prisma</span>
+                <span>Node</span>
+                <span>Typescript</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+        </motion.a>
+
+        <motion.a
           href="https://tasty.bautistapietraroia.com.ar/"
           target={'_blank'}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -29,10 +76,13 @@ function Projects() {
           <div className={s.projectsWrapperItem}>
             <img src={tasty} alt="Tasty Recipes APP" />
             <div className={s.itemContent}>
-              <h6>Tasty Recipes App</h6>
+              <h6>Recipes App</h6>
               <div className={s.spanWrapper}>
-                <span>PERN Stack</span>
+                <span>React</span>
                 <span>Redux</span>
+                <span>Node</span>
+                <span>Express</span>
+                <span>PostgreSQL</span>
                 <span>SASS</span>
               </div>
             </div>
@@ -40,57 +90,21 @@ function Projects() {
         </motion.a>
 
         <motion.a
-          href="https://promodoro.bautistapietraroia.com.ar/"
+          href="https://weather.bautistapietraroia.com.ar/"
           target={'_blank'}
           transition={{ delay: 0.2, duration: 0.5 }}
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}>
           <div className={s.projectsWrapperItem}>
-            <img src={promodoro} alt="Promodoro website" />
+            <img src={weather} alt="Weather App" />
             <div className={s.itemContent}>
-              <h6>Promodoro</h6>
+              <h6>Weather App</h6>
               <div className={s.spanWrapper}>
                 <span>Javascript</span>
-                <span>Electron</span>
-              </div>
-            </div>
-          </div>
-        </motion.a>
-
-        <motion.a
-          href="https://productivity-app.bautistapietraroia.com.ar/"
-          target={'_blank'}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}>
-          <div className={s.projectsWrapperItem}>
-            <img src={productivity} alt="productivity app" />
-            <div className={s.itemContent}>
-              <h6>Productivity App</h6>
-              <div className={s.spanWrapper}>
-                <span>Javascript</span>
-                <span>DraggableJS</span>
-              </div>
-            </div>
-          </div>
-        </motion.a>
-
-        <motion.a
-          href="https://calculator.bautistapietraroia.com.ar/"
-          target={'_blank'}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}>
-          <div className={s.projectsWrapperItem}>
-            <img src={calculator} alt="calculator website" />
-            <div className={s.itemContent}>
-              <h6>Calculator</h6>
-              <div className={s.spanWrapper}>
-                <span>Javascript</span>
+                <span>React</span>
                 <span>SASS</span>
+                <span>Framer Motion</span>
               </div>
             </div>
           </div>
