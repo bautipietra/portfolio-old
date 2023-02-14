@@ -32,9 +32,8 @@ function Projects() {
               <h6>E-Commerce</h6>
               <div className={s.spanWrapper}>
                 <span>React</span>
-                <span>Next</span>
+                <span>Redux</span>
                 <span>Typescript</span>
-                <span>Three</span>
                 <span>Node</span>
                 <span>Express</span>
                 <span>PostgreSQL</span>
