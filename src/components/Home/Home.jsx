@@ -30,7 +30,7 @@ function Home() {
           See CV {dropDown ? <FiChevronDown></FiChevronDown> : <FiChevronRight></FiChevronRight>}
           <ul className={dropDown ? '' : s.hidden}>
             <li><a href="https://drive.google.com/file/d/1Vgd9la-8OhLM_I1LgNedfllTl3uyIKvd/view" target={'_blank'}>ES <span class="fi fi-es"></span></a></li>
-            <li><a href="https://drive.google.com/file/d/1qfFjUBe-pNcpSLsAZSv3M0rioGl6mfUD/view" target={'_blank'}>EN <span class="fi fi-us"></span></a></li>
+            <li><a href="https://drive.google.com/file/d/1Si-6sC49_UTRTeg7uv1sEagCAHCyRPQu/view" target={'_blank'}>EN <span class="fi fi-us"></span></a></li>
           </ul>
         </button>
       </motion.div>
